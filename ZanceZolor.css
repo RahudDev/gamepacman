@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Algerian;
+}
+
+body {
+    position: relative; /* Set body as relative for absolute positioning of buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f2f2; /* Optional: Adds a base color */
+}
+
+#danceFloor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, #2ecc71, #3498db, #9b59b6, #f76c6c);
+    background-size: 200% 100%;
+    animation: gradientAnimation 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Stack elements vertically */
+    overflow: auto;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+button {
+    cursor: pointer;
+    margin: 0 0 10px 0; /* Add some space between buttons */
+    padding: 10px 20px; /* Make buttons larger and easier to click */
+    font-size: 16px; /* Increase font size for better readability */
+    background-color: #FFF; /* Button background */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #ddd;
+    transform: translateY(1px);
+}
+canvas {
+    background-color : black;
+    position: relative; /* Set body as relative for absolute positioning of buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
